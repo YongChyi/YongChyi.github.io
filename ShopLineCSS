@@ -1,0 +1,29 @@
+.main-header
+{
+    background-color: ghostwhite;
+}
+.main-header.container
+{
+    display:flex;
+    align-items:center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.main-header.logo
+{
+    width: 100px;
+}
+.main-header.logo img
+{
+    width:100%;
+    vertical-align: middle;
+}
+.main-header .main-nav
+{
+    margin:auto;
+}
+.main-header .main-nav a
+{
+    color: black;
+}
