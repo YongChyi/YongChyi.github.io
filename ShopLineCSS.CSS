@@ -60,9 +60,36 @@
     color: white;
     padding: 5px 10px;
 }
-.banner{}
-.cantainer{}
-.banner-txt h1{}
-.banner-txth1 small{}
-.banner-txt h2{}
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background:
+        url("C:\BuildSchool\ShopLine Image\original (1).png")right center/auto 100%;
+}
+.cantainer
+{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+.banner-txt
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner-txt h1
+{
+    font-size: 80px;
+}
+.banner-txth1 small{
+    display: block;
+    font-size: 53px;
+}
+.banner-txt h2
+{
+
+}
 .banner-txt p{}
