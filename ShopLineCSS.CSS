@@ -42,7 +42,7 @@
     position:absolute;
     left: 50%;
     right: 50%;
-    bottom: -5px;
+    bottom: -10px;
     height: 0;
     border-bottom: 2px solid blue;
     transition: .3s;
@@ -63,38 +63,26 @@
 .banner
 {
     width: 100%;
-    height: 100vh;
-    background: #CCC;
-}
-.banenr::after
-{
-    content: --;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:url("C:\BuildSchool\ShopLine Image\original (1).png");
-    background-size: cover;
-    opacity: .3;
-}
-.banenr .cantainer
-{
-    width: 1200px;
-    height: 50%;
+    height: 80vh;
+    background: url(https://img.shoplineapp.com/media/image_clips/5f069a12dc4d9a00335656c2/original.png?1594268177);
     margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .banner-txt
 {
-    height: 50%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    color: white;
+    flex-direction:column;
     justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .banner-txt h1
 {
     font-size: 50px;
+    color: orange;
 }
 .banner-txt h1 small
 {
@@ -108,5 +96,34 @@
 .banner-txt p
 {
     font-size: 20px;
+}
+.banner-img
+{
+    width: 500px;
+    padding: 100px;
+    vertical-align: middle;
+}
+.main-title
+{
+    margin:100px;
+}
+.title-container
+{
+    width: 700px;
+    margin:auto;
+    text-align: center;
+    justify-content: center;
+}
+.title-container h1
+{
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: .5em;
     display: block;
+    
+}
+.title-container .txt p
+{
+    margin-bottom: 1em;
+    font-size: 20px;
 }
