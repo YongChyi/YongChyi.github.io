@@ -141,6 +141,7 @@
     width: 500px;;
     padding: 20px;
     margin: 10px;
+    align-content: center;
 }
 .col:nth-child(odd)
 {
@@ -149,15 +150,21 @@
 .col img
 {
     width: 600px;
-    justify-content: center;
+    
 }
 .col-txt .list
 {
-    margin: 10px;
-    padding: 10px;
-    width: 400px;
+    margin: auto;
+    padding: auto;
+    width: 450px;
     display: flex;
     flex-wrap:wrap;
-    justify-content:space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    
 
+}
+.col-txt .list .items
+{
+    width:200px;
 }
