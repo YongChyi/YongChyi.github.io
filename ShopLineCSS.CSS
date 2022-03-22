@@ -128,17 +128,23 @@
     font-size: 20px;
 }
 .group
-{
+{   
     width: 960px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 .col
+{
+    display: flex;
+}
+.col-txt
 {
     width: 438px;;
     padding: 10px;
     margin: 10px;
+}
+.col:nth-child(odd)
+{
+    flex-direction: row-reverse;
 }
 .col img
 {
