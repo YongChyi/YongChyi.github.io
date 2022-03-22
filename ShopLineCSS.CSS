@@ -139,8 +139,9 @@
 .col-txt
 {
     width: 438px;;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
+    justify-content: center;
 }
 .col:nth-child(odd)
 {
@@ -149,4 +150,14 @@
 .col img
 {
     width: 438px;
+}
+.col-txt .list
+{
+    margin: 20px;
+    padding: 20px;
+}
+.col-txt .list .items
+{
+    display: flex;
+    flex-wrap: wrap;
 }
