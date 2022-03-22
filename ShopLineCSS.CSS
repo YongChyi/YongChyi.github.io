@@ -129,7 +129,7 @@
 }
 .group
 {   
-    width: 960px;
+    width: 1200px;
     margin: auto;
 }
 .col
@@ -138,10 +138,9 @@
 }
 .col-txt
 {
-    width: 438px;;
+    width: 500px;;
     padding: 20px;
     margin: 10px;
-    justify-content: center;
 }
 .col:nth-child(odd)
 {
@@ -149,15 +148,15 @@
 }
 .col img
 {
-    width: 438px;
+    width: 600px;
+    justify-content: center;
 }
 .col-txt .list
 {
-    margin: 20px;
-    padding: 20px;
-}
-.col-txt .list .items
-{
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
