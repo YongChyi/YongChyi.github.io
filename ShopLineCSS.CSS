@@ -243,33 +243,34 @@ button
     border-radius: 50%;
     vertical-align: middle;
 }
-.grouping
+.grouping-granpa
 {
-    width: 100%;
     background-color:#f4f5f7;
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-    flex-wrap: wrap;
-    
-
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .grouping title
 {
-    font-size: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.items
+.grouping-papa 
 {
-    width: 200px;
-    margin:4px;
-    flex-direction: row;
-    display:flex;
-    flex-wrap: wrap;
-    
-    
-}
-.items p
-{
+    width: 1200px;
     display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
 }
+.grouping-papa .items
+{
+    width: 300px;
+    padding: 20px;
+    
+}
+
