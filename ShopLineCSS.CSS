@@ -370,13 +370,29 @@
 .point h4
 {
     color: white;
+    font-size: 20px;
 }
 .point nav a
 {
     text-decoration:none;
-    color: white;
+    color: #748094;
     padding: 10px 0 0;
 }
-
+.copyright nav
+{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+.copyright nav a
+{
+    color:#748094 ;
+    margin: 10px;
+    text-decoration: none;
+}
+.copyright p
+{
+    
+}
 
 
