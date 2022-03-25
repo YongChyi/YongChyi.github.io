@@ -263,4 +263,90 @@ button
     padding: 20px;
     
 }
+.recommend-granpa
+{
+    text-align: center;
+}
+.recommend-granpa span
+{
+    color:blue;
+}
+.recommend-supplier a
+{
+    margin: 20px;
+}
+.papa
+{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    padding:10px;
+}
+.information
+{
+    text-align:left;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.information a
+{
+    align-content: flex-start;
+    /* justify-content: flex-start;
+    align-content: flex-start;
+    align-content: flex-start; */
+
+}
+.global-grandpa
+{
+    background-color: #172b4d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.global-papa
+{
+    width: 1200px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    /* text-align: center; */
+    
+}
+.global-image
+{
+    /* align-items: flex-end; */
+    /* justify-content: flex-end;  */
+    /* text-align: right;  */
+    /* align-content: flex-end; */
+    margin: 60px;
+}
+.free
+{
+    border-radius: 200px 200px 200px 200px;
+    
+    background-color: blue;
+    text-align: center;
+    
+}
+.free button{
+    text-decoration: none;
+    
+}
+.free button a
+{
+    color: white;
+    border: none;
+
+}
+
+
 
