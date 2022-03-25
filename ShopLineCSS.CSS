@@ -58,7 +58,6 @@
 .main-header .container
 {
     display: flex;
-    /* align-items:center; */
     padding: 20px;
     max-width: 100%;
     margin: auto;
@@ -106,13 +105,13 @@
     left: 0;
     right: 0;
 }
-.main-header button
+.freetest nav
 {
     border-radius: 200px 200px 200px 200px;
     border: none;
     background-color: blue;
 }
-.main-header button a
+.freetest  a
 {
     text-decoration: none;
     color: white;
@@ -390,9 +389,6 @@
     margin: 10px;
     text-decoration: none;
 }
-.copyright p
-{
-    
-}
+
 
 
