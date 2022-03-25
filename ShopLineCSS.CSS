@@ -25,6 +25,10 @@
 }
 .close
 {
+    text-decoration: none;
+}
+.close a
+{
     border-style: none;
     background-color: #fe7200;
     color: white;
@@ -105,13 +109,13 @@
     left: 0;
     right: 0;
 }
-.freetest nav
+.main-header button
 {
     border-radius: 200px 200px 200px 200px;
     border: none;
     background-color: blue;
 }
-.freetest  a
+.main-header button  a
 {
     text-decoration: none;
     color: white;
@@ -161,6 +165,16 @@
 .test p
 {
     font-size: 20px;
+
+}
+input[type=email]
+{
+    border:none;
+    width: 50%;
+    background-color:#000000;
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+
 
 }
 .image
