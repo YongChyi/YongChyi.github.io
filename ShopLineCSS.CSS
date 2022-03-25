@@ -23,7 +23,7 @@
     align-items: center; 
     
 }
-button
+.close
 {
     border-style: none;
     background-color: #fe7200;
@@ -332,20 +332,50 @@ button
 .free
 {
     border-radius: 200px 200px 200px 200px;
-    
+    border: none;
     background-color: blue;
     text-align: center;
     
 }
-.free button{
-    text-decoration: none;
-    
-}
 .free button a
 {
-    color: white;
-    border: none;
+    text-decoration: none;
 
+}
+.main-footer
+{
+    padding:150px 0 0;
+    background-color:#00142d;
+
+}
+.foot-container
+{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+.point
+{
+    width: 0;
+    flex-grow: 1;
+    margin:0 20px;
+    
+}
+.point nav 
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+.point h4
+{
+    color: white;
+}
+.point nav a
+{
+    text-decoration:none;
+    color: white;
+    padding: 10px 0 0;
 }
 
 
