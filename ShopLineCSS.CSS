@@ -58,6 +58,10 @@
 .main-header
 {
     background-color: ghostwhite;
+    left:0;
+    right: 0;
+    position: fixed;
+    
 }
 .main-header .container
 {
@@ -171,11 +175,10 @@ input[type=email]
 {
     border:none;
     width: 50%;
-    background-color:#000000;
+    background-color:transparent;
     border-bottom: 2px solid white;
-    margin: 20px 0;
-
-
+    margin: 40px 0;
+    padding: 5px;
 }
 .image
 {
@@ -342,18 +345,21 @@ input[type=email]
     /* align-content: flex-end; */
     margin: 60px;
 }
-.free
+.free button 
 {
     border-radius: 200px 200px 200px 200px;
     border: none;
     background-color: blue;
-    text-align: center;
     margin: 30px;
+    text-decoration: none;
+    width: 200px;
     
 }
 .free button a
 {
     text-decoration: none;
+    border:none;
+    color: white;
 
 }
 .main-footer
