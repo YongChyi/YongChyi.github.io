@@ -12,7 +12,7 @@
             height: 800px;
             margin: auto;
             display: grid;
-            grid-template-columns:5% 5% repeat(9,1fr) 5%;
+            grid-template-columns:3% 5% repeat(5,1fr)3% repeat(3,1fr);
             grid-template-rows: repeat(25,1fr);
         }
         .title
@@ -26,10 +26,17 @@
             align-items: center;
             
         }
+        .title span
+        {
+            font-size: 60px;
+            writing-mode: vertical-lr;
+            vertical-align: middle;
+            margin-right:30px ;
+        }
         .intro
         {
             grid-column:1/5;
-            grid-row:4/11;
+            grid-row:4/13;
             background-color: black;
             color: white;
             padding:10px;
@@ -38,29 +45,62 @@
         {
             grid-column:3/9;
             grid-row: 4/18;
-
         }
         .point
         {
             grid-column:2/8;
-            grid-row: 14/25;
+            grid-row: 19/20;
             background-color:#eeeeee;
+            padding: 10px;
         }
-
-        h4
+        .slogan
         {
             color: red;
-            font-size: 25px;
-
+            font-size: 20px;
+            display: flex;
+            align-items: center;
         }
-        h5
+        .point .slogan:after
+        {
+            content:'';
+            display: block;
+            width:20px;
+            height:4px;
+            background-color: #e7211b;
+            flex-grow: 1 ;
+        }
+        .point h3
         {
             background-color: black;
             color: white;
             display: inline;
-            font-size: 20\px;
+            font-size: 20px;
         }
-        .titleeven
+        .point p
+        {
+            padding-left: 2em;
+            position: relative;
+        }
+        .point p::after
+        {
+            content:'';
+            position: absolute;
+            width:4px;
+            height: 4px;
+            background-color: #e7211b;
+            left: 1em;
+            top: 0.5em;
+            border-radius: 50%;
+        }
+
+        .block
+        {
+            background-color: #eeeeee;
+            grid-column: 7/10;
+            grid-row: 2/15;
+        }
+
+        .group:nth-of-type(even) .title
         {
             grid-column: 7/10;
             grid-row:1/4;
@@ -69,41 +109,39 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
         }
-        .introeven
+        .group:nth-of-type(even) .intro
         {
             grid-column:7/10;
             grid-row:4/11;
-            /* padding-right: 100px; */
             background-color: black;
             color: white;
             padding: 15px;
-
         }
-        .imageeven
+        .group:nth-of-type(even) .image
         {
-            grid-column:1/8;
+            grid-column:2/9;
             grid-row: 4/18;
-
         }
-        .pointeven
-        {
-            grid-column:4/10;
-            grid-row: 16/25;
-            background-color:#eeeeee;
-        }
-        .block
+        .group:nth-of-type(even) .block
         {
             background-color: #eeeeee;
-            grid-column: 7/10;
-            grid-row: 2/12;
+            grid-column: 5/9;
+            grid-row: 2/15;
         }
-        .blockeven
+        .group:nth-of-type(even) .point
         {
-            background-color: #eeeeee;
-            grid-column: 4/9;
-            grid-row: 2/14;
+            grid-column: 4/10;
+        }
+        .button
+        {
+            grid-column: 8/10;
+            grid-row: 14/16;
+        }
+        .group:nth-of-type(even) .button
+        {
+            grid-column: 1/3;
+            grid-row: 14/16;
         }
 
     </style>
@@ -112,86 +150,101 @@
     <div class="group">
         <div class="block"></div>
         <div class="image"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-1-video-button-bg.png?9e068d9b"></div>
-        <div class="title"><h2>01操控樂趣</h2></div>
+        <div class="title"><h2><span>01</span>操控樂趣</h2></div>
+        <div class="button">
+            <img src="https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069"> 
+        </div>
         <div class="intro">
             <h3>人人滿意的駕駛體驗</h3>
             <p>透過最佳重量分配,實現平順起步、支線穩定加速,過彎同時保持車身平穩,帶給駕駛更靈敏的道路反饋,享受隨心~~的形式快感。</p>
         </div>
         <div class="point"> 
-            <h4>因為我們做了這些革新</h4>
-            <h5>低重心設計</h5>
-            <li>透過低重心設計,不僅呈現更低伏的外觀,更能減少車身側傾,保持高速行駛穩定性。</li>
-            <h5>車體剛性強化</h5>
-            <li>車身結構採用超高強度鋼材、提高車輛穩定性,同時藉由雷射強化焊接技術,大幅增加 焊點數量,提升車身抗扭剛性,強化駕取穩定性及安全性,</li>
-            <h5>四輪獨立懸吊</h5>
-            <li>搭載全新四輪獨立懸吊設定,透過懸吊的高承載強度,保持輪胎抓地力,同時兼顧轉向 靈敏度與清晰路感回饋,提升駕樂壇。</li>
+            <div class="slogan">因為我們做了這些革新</div>
+            <h3>低重心設計</h3>
+            <p>透過低重心設計,不僅呈現更低伏的外觀,更能減少車身側傾,保持高速行駛穩定性。</p>
+            <h3>車體剛性強化</h3>
+            <p>車身結構採用超高強度鋼材、提高車輛穩定性,同時藉由雷射強化焊接技術,大幅增加 焊點數量,提升車身抗扭剛性,強化駕取穩定性及安全性,</p>
+            <h3>四輪獨立懸吊</h3>
+            <p>搭載全新四輪獨立懸吊設定,透過懸吊的高承載強度,保持輪胎抓地力,同時兼顧轉向 靈敏度與清晰路感回饋,提升駕樂壇。</p>
         </div>
         
     </div>
     <div class="group">
-        <div class="blockeven"></div>
-        <div class="imageeven"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-2-video-button-bg.png?af18d668"></div>
-        <div class="titleeven"><h2>02安全守護</h2></div>
-        <div class="introeven">
+        <div class="block"></div>
+        <div class="image"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-2-video-button-bg.png?af18d668"></div>
+        <div class="title"><h2><span>02</span>安全守護</h2></div>
+        <div class="button">
+            <img src="https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069"> 
+        </div>
+        <div class="intro">
             <h3>行車更安心的高剛性車體</h3>
             <p>您的愛車會妥協保護您，強悍穩固的車身是您安全無慮。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。</p>
         </div>
-        <div class="pointeven"> 
-            <h4>因為我們做了這些革新</h4>
-            <h5>主動安全</h5>
-            <li>以先進的TSS系統、主動偵測路況、輔助駕駛判斷路況並維持行車安全。</li>
-            <h5>被動安全</h5>
-            <li>堅固的高剛性車體，使用熱沖壓材料的高強抗扭鋼板，強化做場對意外事故的保護力。</li>
+        <div class="point"> 
+            <div class="slogan">因為我們做了這些革新</div>
+            <h3>主動安全</h3>
+            <p>以先進的TSS系統、主動偵測路況、輔助駕駛判斷路況並維持行車安全。</p>
+            <h3>被動安全</h3>
+            <p>堅固的高剛性車體，使用熱沖壓材料的高強抗扭鋼板，強化做場對意外事故的保護力。</p>
         </div>    
     </div>
     <div class="group">
         <div class="block"></div>
         <div class="image"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-3-video-button-bg.png?705545c7"></div>
-        <div class="title"><h2>03乘坐舒適</h2></div>
+        <div class="title"><h2><span>03</span>乘坐舒適</h2></div>
+        <div class="button">
+            <img src="https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069"> 
+        </div>
         <div class="intro">
             <h3>令人放鬆舒適的車室空間</h3>
             <p>車室空間設計著重人體工學.透過方向盤、踏板位置優化,追求更舒適的駕駛位置,並以新型座椅設計·提高座椅包覆性.致力寶現長途駕駛不疲勞的舒適駕馭體驗.</p>
         </div>
         <div class="point"> 
-            <h4>因為我們做了這些革新</h4>
-            <h5>駕駛位置最佳化</h5>
-            <li>針對駕駛位置進行徹底的修改,讓者可如同握手般自然舒適地操控方向</li>
-            <h5>駕馭視野佳</h5>
-            <li>考量駕驶坐進車內的高度透過前擋玻璃位置的調整.到盲區極小化,使駕駛視野更開閱.同步提升駕馭安全.</li>
-            <h5>更寧靜的車室</h5>
-            <li>採用最新三層結構的隔音材料,與引擎、變速箱的零件改革,將座触的震動抑制在最小限度·提供乘客舒適安靜的感受</li>
+            <div class="slogan">因為我們做了這些革新</div>
+            <h3>駕駛位置最佳化</h3>
+            <p>針對駕駛位置進行徹底的修改,讓者可如同握手般自然舒適地操控方向</p>
+            <h3>駕馭視野佳</h3>
+            <p>考量駕驶坐進車內的高度透過前擋玻璃位置的調整.到盲區極小化,使駕駛視野更開閱.同步提升駕馭安全.</p>
+            <h3>更寧靜的車室</h3>
+            <p>採用最新三層結構的隔音材料,與引擎、變速箱的零件改革,將座触的震動抑制在最小限度·提供乘客舒適安靜的感受</p>
         </div>
     </div>
     <div class="group">
-        <div class="blockeven"></div>
-        <div class="imageeven"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-4-video-button-bg.png?24515544"></div>
-        <div class="titleeven"><h2>04以人為本</h2></div>
-        <div class="introeven">
+        <div class="block"></div>
+        <div class="image"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-4-video-button-bg.png?24515544"></div>
+        <div class="title"><h2><span>04</span>以人為本</h2></div>
+        <div class="button">
+            <img src="https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069"> 
+        </div>
+        <div class="intro">
             <h3>使用者導向的貼心設計</h3>
             <p>藉由高度人性化的介面整合、傅遞車輛資訊.豐富日常駕駛體驗.從提升油耗表現到行李廂空間最適化·均細心考量.更加貼近使用者真正所需與習慣.並給予即時回應</p>
         </div>
-        <div class="pointeven"> 
-            <h4>因為我們做了這些革新</h4>
-            <h5>優異油耗表現</h5>
-            <li>JRIS為例 更勁的高效引將效升40蓬到世界水準燃油效率新境界</li>
-            <h5>行李箱空間最適化</h5>
-            <li>PRIUS海例透池位移到後座下方讓行李箱有更大的空</li>
+        <div class="point"> 
+            <div class="slogan">因為我們做了這些革新</div>
+            <h3>優異油耗表現</h3>
+            <p>JRIS為例 更勁的高效引將效升40蓬到世界水準燃油效率新境界</p>
+            <h3>行李箱空間最適化</h3>
+            <p>PRIUS海例透池位移到後座下方讓行李箱有更大的空</p>
         </div>    
     </div>
     <div class="group">
         <div class="block"></div>
         <div class="image"><img src="https://www.toyota.com.tw/asset/img/tech_tnga/advantage-5-video-button-bg.png?ad476b92"></div>
-        <div class="title"><h2>05引以為傲</h2></div>
+        <div class="title"><h2><span>05</span>引以為傲</h2></div>
+        <div class="button">
+            <img src="https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069"> 
+        </div>
         <div class="intro">
             <h3>人人滿意的駕駛體驗</h3>
             <p>極具吸引力的精心設計TNGA 車款擁有讓人忍不住回頭的新潮外觀、讓駕駛充滿自信的駕馭快感!不僅讓車主能展現個人風格,也能讓擁有者都能引以為傲.</p>
         </div>
         <div class="point"> 
-            <h4>因為我們做了這些革新</h4>
-            <h5>設計概念</h5>
-            <li>TNGA低重心設計,不僅現更低伏的運勤化外觀,更講究高品質內裝的一致性。</li>
-            <h5>環保概念</h5>
-            <li>為了對環境保護盡一份心力我們全面提升傳统引聚,速箱與油電複合勤力得動力效慌</li>
+            <div class="slogan">因為我們做了這些革新</div>
+            <h3>設計概念</h3>
+            <p>TNGA低重心設計,不僅現更低伏的運勤化外觀,更講究高品質內裝的一致性。</p>
+            <h3>環保概念</h3>
+            <p>為了對環境保護盡一份心力我們全面提升傳统引聚,速箱與油電複合勤力得動力效慌</p>
         </div>
     </div>
 </body>
