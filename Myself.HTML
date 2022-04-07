@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row
+        {
+            width: 1200px;
+            margin: auto;
+        }
+        .picturestyle
+        {
+            width: 600px;
+            height: 500px;
+        }
+        img
+        {
+            width: 400px;
+            height:400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="selfie">
+                <img id="Myselfie" src="" alt="">
+            </div>
+            <div class="information">
+                <p id="name"></p>
+                <p id="email"></p>
+                <p id="school"></p>
+                <p id="interest"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let img = document.getElementById("Myselfie");
+        let p_name = document.getElementById("name");
+        let p_email = document.getElementById("email");
+        let p_school = document.getElementById("school");
+        let p_interest = document.getElementById("interest");
+
+        const selfieUrl="https://user-images.githubusercontent.com/101863752/162231543-663457ce-f20d-426c-b61d-c4846b75bee8.jpg";
+        let MyName ="林詠琦";
+        let MyEmail ="samy19990103@gmail.com";
+        let MySchool ="中華大學";
+        let MyInterest ="發呆、到處吃吃喝喝（然後願望是不會肥）怎麽可能！";
+
+        img.setAttribute("src",selfieUrl);
+        img.setAttribute("alt","我");
+        img.setAttribute("class","picturestyle")
+
+        img.src = selfieUrl;
+        p_name.innerText= `name:${MyName}`;
+        p_email.innerText=`gmail:${MyEmail}`;
+        p_school.innerText=`school:${MySchool}`;
+        p_interest.innerText=`interest:${MyInterest}`;
+        document.write("<br>");
+
+        const Imagearray=[
+            "https://github.com/YongChyi/YongChyi.github.io/blob/main/45328.jpg?raw=true",
+            "https://github.com/YongChyi/YongChyi.github.io/blob/main/45329.jpg?raw=true",
+            "https://github.com/YongChyi/YongChyi.github.io/blob/main/45330.jpg?raw=true",
+        ]
+
+        Imagearray.forEach((url,index)=>{
+            document.write(`<img src=${url}>`)
+        });
+
+    </script>
+</body>
+</html>
