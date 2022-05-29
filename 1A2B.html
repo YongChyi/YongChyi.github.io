@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>1A2B</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="button">
+                <button type="button" id="start" class="btn btn-outline-secondary">開始</button>
+                <button type="button" id="restart" class="btn btn-outline-secondary">放棄</button>
+                <button type="button" id="peek" class="btn btn-outline-secondary">看答案</button>
+            </div>
+            <ul id="guess-history">
+                
+            </ul>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">猜答案</span>
+                <input type="text" id="guess" class="form-control" placeholder="4碼不重複數字" aria-label="" aria-describedby="basic-addon1">
+                <button id="submit" class="btn btn-outline-secondary" type="button" id="button-addon2">猜</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+        const btn_start = document.getElementById("start");
+        const btn_restart = document.getElementById("restart");
+        const btn_peek = document.getElementById("peek");
+        const ul_guess_history = document.getElementById("guess-history");
+        const input_text = document.getElementById("guess");
+        const btn_submit = document.getElementById("submit");
+        var result = [ ];
+
+        window.onload =()=>
+        {
+            btn_start.addEventListener('click',start)
+            btn_restart.addEventListener('click',restart)
+            btn_peek.addEventListener('click',peek)
+            btn_submit.addEventListener('click',submit)
+            
+            
+        }
+        function start()
+        {
+            produceAnswer();
+            btn_start.disabled = true;
+            
+            
+        }
+        function peek()
+        {
+            alert(result)
+        }
+        function restart()
+        {
+            input_text.innerHTML = '';
+            ul_guess_history.innerHTML = ''
+            result=[];
+            btn_start.disabled =false;
+
+        }
+        function produceAnswer()
+        {
+            var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            var ranNum = 4;
+
+            for (var i = 0; i < ranNum; i++) {
+            
+            var ran = Math.floor(Math.random() * (arr.length - i));
+            
+            result.push(arr[ran]);
+            
+            arr[ran] = arr[arr.length - i - 1];
+            
+            };
+            console.log(result);
+            
+            
+        }
+        function submit()
+        {
+            let number = input_text.value
+                .split('')
+                .map(c => parseInt(c))
+                //map() 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
+            
+            //防呆？
+            if(number.length != 4 )
+            {
+                alert('四碼哦~');
+                return;
+            }
+            else if(number.length != new Set(number).size)
+            {
+                alert('不重複哦~')
+                return;
+            }
+            else 
+            {
+                let a = result.filter( (n ,index) => index == number.indexOf(n)).length
+
+                let b = result.filter( (n ,index) => index != number.indexOf(n) && number.indexOf(n) != -1).length
+
+                let intersect = result.filter( n => number.indexOf(n) != -1)
+
+                b= intersect.length - a
+
+                console.log(a)
+                console.log(b)
+
+                let li = document.createElement('li')
+                ul_guess_history.appendChild(li)
+
+                li.setAttribute("class","list-group-item")
+
+                let btnGroup = document.createElement('div')
+                li.appendChild(btnGroup)
+
+                btnGroup.setAttribute("class","btn-group")
+
+                let left_guess = document.createElement('button')
+                btnGroup.appendChild(left_guess)
+                left_guess.setAttribute("class", "btn btn-warning")
+                left_guess.innerText =input_text.value
+
+                let right_check = document.createElement('button')
+                btnGroup.appendChild(right_check)
+                right_check.setAttribute("class", "btn btn-danger")
+                right_check.innerText = `${a}A${b}B`
+
+                if(a ==4)
+                {
+                    alert("猜中了")
+                    right_check.classList.remove("btn-danger")
+                    right_check.classList.add("btn-success")
+
+                    btn_submit.setAttribute("disabled","disabled")
+                }
+            }
+                console.log(number);
+
+        }   
+
+
+
+</script>
+</body>
+</html>
