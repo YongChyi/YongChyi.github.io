@@ -13,17 +13,19 @@
         #toggle_checkbox {
             display: none;
         }
+
         #toggle_checkbox2 {
             display: none;
         }
-        .edit
-        {
-            position:relative;
+
+        .edit {
+            position: relative;
         }
+
         label {
             position: absolute;
             top: -10px;
-            /* right: 30px; */  
+            /* right: 30px; */
             left: -100px;
             display: block;
             width: 140px;
@@ -72,8 +74,9 @@
             right: 0px;
             width: 30px;
             height: 30px;
-            border-color: red;
+            border-color: green;
         }
+
         #toggle_checkbox2:checked+label:before {
             top: 20px;
             left: 50px;
@@ -87,37 +90,39 @@
             right: 0px;
             width: 30px;
             height: 30px;
-            border-color: red;
+            border-color: green;
         }
-        .nav{
+        a
+        {
+            color: black;
+        }
+
+        .nav {
             margin-left: 10px;
         }
-        @media only screen and (max-width: 768px){
-            .data{
+
+        @media only screen and (max-width: 768px) {
+            .data {
                 width: 100% !important;
             }
         }
-        
     </style>
-    <title>Introduction</title>
+    <title>Privacy</title>
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="row m-auto">
-            <div class="nav">
-                <div class="privacy d-flex w-75">
-                    <a href="#" style="text-decoration:none;color: black;">賬號</a>
-                    <span class="mx-2 mb-2">></span>
-                    <p>隱私與分享</p>
-                </div>
-                <div class="title mb-5 w-75">
-                    <h1 class="fs-4 fw-bold">隱私與分享</h1>
-                </div>
-            </div>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold">
+                    <li class="breadcrumb-item"><a href="./Account_Page.html">賬號</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">隱私與分享</li>
+                </ol>
+            </nav>
             <div class="content d-flex flex-wrap justify-content-center">
                 <div class="data w-50">
-                    
-                    <div class="d-flex align-items-center justify-content-between w-100 border-bottom mb-4 pb-4" >
+
+                    <div class="d-flex align-items-center justify-content-between w-100 border-bottom mb-4 pb-4">
                         <div class="info w-75">
                             <h2 class="fw-bold fs-6">在 Facebook 上分享我的動態</h2>
                             <span class="fs-6">開啟此功能代表你的動態會分享到 Facebook,其中可能包括用戶名稱、個人資料相片和你造訪過的地點。</span>
@@ -127,7 +132,7 @@
                             <label for="toggle_checkbox"></label>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between w-100 border-bottom mb-4 pb-4" >
+                    <div class="d-flex align-items-center justify-content-between w-100 border-bottom mb-4 pb-4">
                         <div class="info w-75">
                             <h2 class="fs-6 fw-bold">讓我的個人資料及房源出現在搜尋引擎中</h2>
                             <span>開啟此功能代表你的個人資料和房源頁面會出現在 Google 等搜尋引擎的搜尋結果中。</span>
@@ -137,19 +142,19 @@
                             <label for="toggle_checkbox2"></label>
                         </div>
                     </div>
-                    
+
                 </div>
-                <div class="information w-25 d-none d-md-block m-1 p-4 fs-1 border m-auto">
+                <div class="information d-none d-md-block m-1 p-4 fs-1 border m-auto" style="width: 400px; ;">
                     <i class="fa-solid fa-share-nodes"></i>
                     <h3 class="fs-5 fw-bold my-3">選擇想分享的內容</h3>
                     <p class="fs-6 text-secondary my-3">Airbnb 非常重視你的隱私。你可以使用此頁面選擇分享活動的方式。</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
